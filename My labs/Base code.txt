@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+
+void Task1()
+{
+	cout << "\nЗапущено 1-ое задание." << endl;
+}
+void Task2()
+{
+	cout << "\nЗапущено 2-ое задание." << endl;
+
+}
+void Task3()
+{
+	cout << "\nЗапущено 3-е задание." << endl;
+
+}
+
+void Task4()
+{
+	cout << "\nЗапущено 4-ое задание." << endl;
+
+}
+void Task5()
+{
+	cout << "\nЗапущено 5-ое задание." << endl;
+
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+
+	int num;
+	while (true)
+	{
+		cout << "\nЗдравствуйте! Введите номер задания (1,2,3,4 или 5): "; cin >> num;
+
+		if (num == 1)
+		{
+			Task1();
+		}
+		if (num == 2)
+		{
+			Task2();
+		}
+		if (num == 3)
+		{
+			Task3();
+		}
+		if (num == 4)
+		{
+			Task4();
+		}
+		if (num == 5)
+		{
+			Task5();
+		}
+	}
+}
