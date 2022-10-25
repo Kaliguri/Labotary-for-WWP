@@ -85,12 +85,14 @@ void Task4()
 	cout << "Введите число лет: ";					 cin >> years;
 	cout << "Введите процентную годовую ставку: ";   cin >> proc;
 
+	float mi;
 	price -= start_capital;
+	mi = price / years;
 	for (int cur_years = 0; cur_years < years; cur_years++)
 	{
-		cout << "Год: " << cur_years + 1 << ". Платеж за данный год: " << price/years + price*proc/100 << endl;
-		price -= price/years;
-		su += price / years + price * proc / 100;
+		cout << "Год: " << cur_years + 1 << ". Платеж за данный год: " << mi + price*proc/100 << endl;
+		su += mi + price * proc / 100;
+		price -= mi;
 	}
 	cout << "Суммарные выплаты: " << su << endl;
 }
@@ -118,11 +120,10 @@ void Task4()
 			shilpl = pens / 12;
 			pens = pens % 12;
 
-			funtpl = pens / 20;
+			funtpl = shil / 20;
 			shil = shil % 20 + shilpl;
 
 			funt += funtpl;
-
 			cout << "Итого: " << funt << " " << shil << " " << pens << endl;
 
 			cout << "Для повторного использования программы введите \"+\" : "; cin >> ans;
@@ -151,7 +152,7 @@ void Task4()
 		shilpl = pens / 12;
 		pens = pens % 12;
 
-		funtpl = pens / 20;
+		funtpl = shil / 20;
 		shil = shil % 20 + shilpl;
 
 		funt += funtpl;
