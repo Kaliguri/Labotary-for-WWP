@@ -50,8 +50,14 @@ void Task2()
 {
 	cout << "\nЗапущено 2-ое задание. Вычисления с временными данными (но теперь еще и функции!)" << endl;
 
-	ttime t;
-	cout << "Введите часы, минуты, секунды (через пробел): "; cin >> t.hours >> t.minutes >> t.seconds; cout << endl;
+	ttime t,t2;
+	cout << "Введите часы, минуты, секунды (через пробел): "; cin >> t.hours >> t.minutes >> t.seconds;
+	cout << "Введите часы, минуты, секунды (через пробел): "; cin >> t2.hours >> t2.minutes >> t2.seconds; cout << endl;
+
+	t.hours += t2.hours;
+	t.minutes += t2.minutes;
+	t.seconds += t2.seconds;
+
 	cout << "Суммарно: " << time_to_secs(t) << " секунд." << endl;
 	cout << "Перевод обратно в структурный тип. Часов: " << secs_to_time(time_to_secs(t)).hours << ", Минут: " << secs_to_time(time_to_secs(t)).minutes << ", Секунд: " << secs_to_time(time_to_secs(t)).seconds << endl;
 
