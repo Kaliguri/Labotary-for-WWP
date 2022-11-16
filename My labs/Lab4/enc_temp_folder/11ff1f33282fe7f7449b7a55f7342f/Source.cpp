@@ -104,13 +104,13 @@ void Task4()
 	cout << "Введите значения для второй переменной времени (часы, минуты, секунды через пробел): "; cin >> t2.hours >> t2.minutes >> t2.seconds;
 
 	cout << "Первая переменная (часы, минуты, секунды через пробел): " << t1.hours << " " << t1.minutes << " " << t1.seconds; cout << endl;
-	cout << "Вторая переменная (часы, минуты, секунды через пробел): " << t2.hours << " " << t2.minutes << " " << t2.seconds; cout << endl << endl;
+	cout << "Первая переменная (часы, минуты, секунды через пробел): " << t2.hours << " " << t2.minutes << " " << t2.seconds; cout << endl << endl;
 
 	cout << "Использование функции Swap." << endl << endl;
 	swap(t1, t2);
 
 	cout << "Первая переменная (часы, минуты, секунды через пробел): " << t1.hours << " " << t1.minutes << " " << t1.seconds; cout << endl;
-	cout << "Вторая переменная (часы, минуты, секунды через пробел): " << t2.hours << " " << t2.minutes << " " << t2.seconds; cout << endl;
+	cout << "Первая переменная (часы, минуты, секунды через пробел): " << t2.hours << " " << t2.minutes << " " << t2.seconds; cout << endl;
 
 }
 void Sub_Task5_A(int n)
