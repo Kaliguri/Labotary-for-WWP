@@ -205,16 +205,16 @@ void Task1()
 	cout << "\nЗапущено 1-ое задание. Класс Double" << endl;
 	Double d1, d2, d3;
 	double d_temp;
-	//d1.set_value(2.34);
-	//d2.set_value(5.67);
+	d1.set_value(2.34);
+	d2.set_value(5.67);
 
-	cout << "Дайте значение (инициализируйте) 1-ый объект: "; cin >> d_temp; d1.set_value(d_temp);
-	cout << "Дайте значение (инициализируйте) 2-ой объект: "; cin >> d_temp; d2.set_value(d_temp);
+	//cout << "Дайте значение (инициализируйте) 1-ый объект: "; cin >> d_temp; d1.set_value(d_temp);
+	//cout << "Дайте значение (инициализируйте) 2-ой объект: "; cin >> d_temp; d2.set_value(d_temp);
 	
 	
 	d3.addition_Double(d1, d2);
-	//d3.get_value_on_screen();
-	cout << "Сложнение данных объектов = "; printf("%0.3f", d3.get_value());
+	d3.get_value_on_screen();
+	//cout << "Сложнение данных объектов = "; printf("%0.3f", d3.get_value());
 
 
 }
@@ -253,17 +253,17 @@ void Task4()
 	int t_h, t_m, t_s;
 	Time t1, t2, t3;
 
-	//t1.set_time(1, 50, 20);
-	//t2.set_time(3, 30, 50);
+	t1.set_time(1, 50, 20);
+	t2.set_time(3, 30, 50);
 
-	cout << "Дайте значение (инициализируйте) 1-ый объект (введите часы, минуты, секунды через пробел): "; cin >> t_h >> t_m >> t_s;
-	t1.set_time(t_h, t_m, t_s);
-	cout << "Дайте значение (инициализируйте) 2-ой объект (введите часы, минуты, секунды через пробел): "; cin >> t_h >> t_m >> t_s;
-	t2.set_time(t_h, t_m, t_s);
+	//cout << "Дайте значение (инициализируйте) 1-ый объект (введите часы, минуты, секунды через пробел): "; cin >> t_h >> t_m >> t_s;
+	//t1.set_time(t_h, t_m, t_s);
+	//cout << "Дайте значение (инициализируйте) 2-ой объект (введите часы, минуты, секунды через пробел): "; cin >> t_h >> t_m >> t_s;
+	//t2.set_time(t_h, t_m, t_s);
 
 	t3.addition_Time(t1, t2);
-	//t3.get_time_on_screen;
-	cout << "Сложнение данных объектов = "; t3.get_time_on_screen();
+	t3.get_time_on_screen();
+	//cout << "Сложнение данных объектов = "; t3.get_time_on_screen();
 
 }
 void Task5()

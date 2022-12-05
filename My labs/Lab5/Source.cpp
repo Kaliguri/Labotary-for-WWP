@@ -37,22 +37,27 @@ void Task1()
 
 int MAX_for_Task2(int size, int m[])
 {
+	int index = 0;
 	int max = -2147483648;
 	for (int k = 0; k < size; k++)
 	{
 		if (max < m[k])
+		{
 			max = m[k];
+			index = k;
+		}
+			
 	}
-	return max;
+	return index;
 }
 
 void Task2()
 {
-	cout << "\nЗапущено 2-ое задание." << endl;
+	cout << "\nЗапущено 2-ое задание. Поиск наибольшего числа и его индекса в массиве" << endl;
 	
 	int nu = 0,digital = 0;
 
-	cout << "Введите количество дробей, которое вы желаете ввести далее: "; cin >> nu;
+	cout << "Введите количество целых чисел, которое вы желаете ввести далее: "; cin >> nu;
 
 	int* mas = new int[nu];
 
@@ -63,7 +68,7 @@ void Task2()
 
 	}
 
-	cout << "Максимальное число в массиве: " << MAX_for_Task2(nu, mas);
+	cout << "Индекс максимального числа в массиве: " << MAX_for_Task2(nu, mas) << ", максимальное число: " << mas[MAX_for_Task2(nu, mas)];
 
 
 
