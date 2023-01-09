@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ostream>
 using namespace std;
 
 void Addarrays(float *m_s1, float *m_s2,float *m_assig, int *size)
@@ -10,8 +11,8 @@ void Addarrays(float *m_s1, float *m_s2,float *m_assig, int *size)
 void Task1()
 {
 	cout << "\nЗапущено 1-ое задание. Сумма элементов 2-х массивов в третий." << endl << endl;
-	float ma1[] = { 1.02,4.94,3.001,5.3 };
-	float ma2[] = { 2.01,5.93,12.001,5.333 };
+	float ma1[] = { 1.02f,4.94f,3.001f,5.3f};
+	float ma2[] = { 2.01f,5.93f,12.001f,5.333f	 };
 	float ma3[4];
 
 	int size_m = sizeof(ma3) / sizeof(ma3[0]);
@@ -95,7 +96,7 @@ void Task4()
 
 	const int mas_count = 10, mas_size = 10;
 
-	int* aA[mas_count];
+	int* aA[mas_count]{};
 
 	for (int i = 0; i < mas_count; i++)
 	{
@@ -119,6 +120,7 @@ void Task4()
 			cout << aA[i][j] << " ";
 		}
 	}
+
 	
 }
 
@@ -132,8 +134,11 @@ void Set_Person(Person* man, int c)
 	
 	for (int i = 0; i < c; i++)
 	{
+		char *t_name = new char[20];
+
 		cout << endl << "Введите данные для " << i + 1 << " сотрудника: " << endl;
 		cout << "Имя: "; cin.ignore(); cin.getline(man[i].Name , 256);
+
 		cout << "Зарплата: "; cin >> man[i].Salary;
 	}
 	
@@ -171,14 +176,13 @@ void Task5()
 	cout << "\nЗапущено 5-ое задание. Снова сотрудники. Теперь - используя указатели." << endl << endl;
 	int count_person = 5;
 
-	Person* mans = new Person;
+	Person* mans = new Person[5];
 	
 	cout << "Запуск функции с вводом данных о сотрудниках" << endl;												Set_Person(mans, count_person);
 	cout << endl << endl << "Запуск функции с выводом данных о сотрудниках" << endl;							Get_Person(mans, count_person);
 	cout << endl << endl << "Запуск функции с cортировкой сотрудников в зависимости от их зарплаты" << endl;	Sort_Person(mans, count_person);
 	cout << endl << endl << "Запуск функции с выводом данных о сотрудниках" << endl;							Get_Person(mans, count_person);
 	
-	delete mans;
 }
 
 int main()
